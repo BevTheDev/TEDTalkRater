@@ -1,0 +1,739 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7365A071B2D219C44B8F7C75 /* Pods_TEDTalkRater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6D0DFDA094FC5A3DD2C47A /* Pods_TEDTalkRater.framework */; };
+		96B2B578212F93D60055EE30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B577212F93D60055EE30 /* AppDelegate.swift */; };
+		96B2B57A212F93D60055EE30 /* RickRollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B579212F93D60055EE30 /* RickRollViewController.swift */; };
+		96B2B580212F93D60055EE30 /* TEDTalkRater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B57E212F93D60055EE30 /* TEDTalkRater.xcdatamodeld */; };
+		96B2B582212F93DA0055EE30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96B2B581212F93DA0055EE30 /* Assets.xcassets */; };
+		96B2B585212F93DA0055EE30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B2B583212F93DA0055EE30 /* LaunchScreen.storyboard */; };
+		96B2B590212F93DA0055EE30 /* TEDTalkRaterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B58F212F93DA0055EE30 /* TEDTalkRaterTests.swift */; };
+		96B2B59B212F93DA0055EE30 /* TEDTalkRaterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B59A212F93DA0055EE30 /* TEDTalkRaterUITests.swift */; };
+		96B2B5AC212F96110055EE30 /* CSVParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B5AB212F96110055EE30 /* CSVParseService.swift */; };
+		96B2B5AF212F9BF60055EE30 /* CodeChallenge.csv in Resources */ = {isa = PBXBuildFile; fileRef = 96B2B5AE212F9BF60055EE30 /* CodeChallenge.csv */; };
+		96B2B5B2212FB10D0055EE30 /* rickroll.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96B2B5B1212FB10D0055EE30 /* rickroll.jpg */; };
+		96B2B5B4212FB12A0055EE30 /* rickroll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 96B2B5B3212FB12A0055EE30 /* rickroll.mp3 */; };
+		96B2B5B6212FB3700055EE30 /* RickRollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B2B5B5212FB3700055EE30 /* RickRollViewController.xib */; };
+		96B2B5B8212FB7180055EE30 /* TalksTabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B5B7212FB7180055EE30 /* TalksTabsViewController.swift */; };
+		96B2B5BA212FB7280055EE30 /* TalksTabsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B2B5B9212FB7280055EE30 /* TalksTabsViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		96B2B58C212F93DA0055EE30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96B2B56C212F93D60055EE30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96B2B573212F93D60055EE30;
+			remoteInfo = TEDTalkRater;
+		};
+		96B2B597212F93DA0055EE30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 96B2B56C212F93D60055EE30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 96B2B573212F93D60055EE30;
+			remoteInfo = TEDTalkRater;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2C5AFF0A5A89311872A84C14 /* Pods-TEDTalkRater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEDTalkRater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TEDTalkRater/Pods-TEDTalkRater.debug.xcconfig"; sourceTree = "<group>"; };
+		96B2B574212F93D60055EE30 /* TEDTalkRater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEDTalkRater.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B2B577212F93D60055EE30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96B2B579212F93D60055EE30 /* RickRollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickRollViewController.swift; sourceTree = "<group>"; };
+		96B2B57F212F93D60055EE30 /* TEDTalkRater.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TEDTalkRater.xcdatamodel; sourceTree = "<group>"; };
+		96B2B581212F93DA0055EE30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		96B2B584212F93DA0055EE30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		96B2B586212F93DA0055EE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B2B58B212F93DA0055EE30 /* TEDTalkRaterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEDTalkRaterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B2B58F212F93DA0055EE30 /* TEDTalkRaterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEDTalkRaterTests.swift; sourceTree = "<group>"; };
+		96B2B591212F93DA0055EE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B2B596212F93DA0055EE30 /* TEDTalkRaterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TEDTalkRaterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96B2B59A212F93DA0055EE30 /* TEDTalkRaterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEDTalkRaterUITests.swift; sourceTree = "<group>"; };
+		96B2B59C212F93DA0055EE30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96B2B5AB212F96110055EE30 /* CSVParseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParseService.swift; sourceTree = "<group>"; };
+		96B2B5AE212F9BF60055EE30 /* CodeChallenge.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CodeChallenge.csv; sourceTree = SOURCE_ROOT; };
+		96B2B5B1212FB10D0055EE30 /* rickroll.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rickroll.jpg; sourceTree = "<group>"; };
+		96B2B5B3212FB12A0055EE30 /* rickroll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = rickroll.mp3; sourceTree = "<group>"; };
+		96B2B5B5212FB3700055EE30 /* RickRollViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RickRollViewController.xib; sourceTree = "<group>"; };
+		96B2B5B7212FB7180055EE30 /* TalksTabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalksTabsViewController.swift; sourceTree = "<group>"; };
+		96B2B5B9212FB7280055EE30 /* TalksTabsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalksTabsViewController.xib; sourceTree = "<group>"; };
+		97F3497E17638B1EC8AEE356 /* Pods-TEDTalkRater.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEDTalkRater.release.xcconfig"; path = "Pods/Target Support Files/Pods-TEDTalkRater/Pods-TEDTalkRater.release.xcconfig"; sourceTree = "<group>"; };
+		9E6D0DFDA094FC5A3DD2C47A /* Pods_TEDTalkRater.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TEDTalkRater.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96B2B571212F93D60055EE30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7365A071B2D219C44B8F7C75 /* Pods_TEDTalkRater.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B2B588212F93DA0055EE30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B2B593212F93DA0055EE30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96B2B56B212F93D60055EE30 = {
+			isa = PBXGroup;
+			children = (
+				96B2B576212F93D60055EE30 /* TEDTalkRater */,
+				96B2B58E212F93DA0055EE30 /* TEDTalkRaterTests */,
+				96B2B599212F93DA0055EE30 /* TEDTalkRaterUITests */,
+				96B2B575212F93D60055EE30 /* Products */,
+				F515463EEEF743AAC9A5479F /* Pods */,
+				DFCB6D3550A015B941543D6D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		96B2B575212F93D60055EE30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B574212F93D60055EE30 /* TEDTalkRater.app */,
+				96B2B58B212F93DA0055EE30 /* TEDTalkRaterTests.xctest */,
+				96B2B596212F93DA0055EE30 /* TEDTalkRaterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96B2B576212F93D60055EE30 /* TEDTalkRater */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B5B0212FB0C40055EE30 /* Resources */,
+				96B2B5AA212F946F0055EE30 /* Services */,
+				96B2B5A9212F94600055EE30 /* Models */,
+				96B2B5A8212F944F0055EE30 /* UI */,
+				96B2B577212F93D60055EE30 /* AppDelegate.swift */,
+				96B2B586212F93DA0055EE30 /* Info.plist */,
+			);
+			path = TEDTalkRater;
+			sourceTree = "<group>";
+		};
+		96B2B58E212F93DA0055EE30 /* TEDTalkRaterTests */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B58F212F93DA0055EE30 /* TEDTalkRaterTests.swift */,
+				96B2B591212F93DA0055EE30 /* Info.plist */,
+			);
+			path = TEDTalkRaterTests;
+			sourceTree = "<group>";
+		};
+		96B2B599212F93DA0055EE30 /* TEDTalkRaterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B59A212F93DA0055EE30 /* TEDTalkRaterUITests.swift */,
+				96B2B59C212F93DA0055EE30 /* Info.plist */,
+			);
+			path = TEDTalkRaterUITests;
+			sourceTree = "<group>";
+		};
+		96B2B5A8212F944F0055EE30 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B583212F93DA0055EE30 /* LaunchScreen.storyboard */,
+				96B2B5B7212FB7180055EE30 /* TalksTabsViewController.swift */,
+				96B2B5B9212FB7280055EE30 /* TalksTabsViewController.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		96B2B5A9212F94600055EE30 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B57E212F93D60055EE30 /* TEDTalkRater.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		96B2B5AA212F946F0055EE30 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B5AB212F96110055EE30 /* CSVParseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		96B2B5AD212F9BE90055EE30 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B5AE212F9BF60055EE30 /* CodeChallenge.csv */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		96B2B5B0212FB0C40055EE30 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B5BB212FB78C0055EE30 /* Other */,
+				96B2B5AD212F9BE90055EE30 /* Data */,
+				96B2B581212F93DA0055EE30 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		96B2B5BB212FB78C0055EE30 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				96B2B5B1212FB10D0055EE30 /* rickroll.jpg */,
+				96B2B5B3212FB12A0055EE30 /* rickroll.mp3 */,
+				96B2B579212F93D60055EE30 /* RickRollViewController.swift */,
+				96B2B5B5212FB3700055EE30 /* RickRollViewController.xib */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		DFCB6D3550A015B941543D6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E6D0DFDA094FC5A3DD2C47A /* Pods_TEDTalkRater.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F515463EEEF743AAC9A5479F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2C5AFF0A5A89311872A84C14 /* Pods-TEDTalkRater.debug.xcconfig */,
+				97F3497E17638B1EC8AEE356 /* Pods-TEDTalkRater.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		96B2B573212F93D60055EE30 /* TEDTalkRater */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B2B59F212F93DA0055EE30 /* Build configuration list for PBXNativeTarget "TEDTalkRater" */;
+			buildPhases = (
+				4BE972641589F2FF4F825431 /* [CP] Check Pods Manifest.lock */,
+				96B2B570212F93D60055EE30 /* Sources */,
+				96B2B571212F93D60055EE30 /* Frameworks */,
+				96B2B572212F93D60055EE30 /* Resources */,
+				A7EF52511126CD6B47AC4C15 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TEDTalkRater;
+			productName = TEDTalkRater;
+			productReference = 96B2B574212F93D60055EE30 /* TEDTalkRater.app */;
+			productType = "com.apple.product-type.application";
+		};
+		96B2B58A212F93DA0055EE30 /* TEDTalkRaterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B2B5A2212F93DA0055EE30 /* Build configuration list for PBXNativeTarget "TEDTalkRaterTests" */;
+			buildPhases = (
+				96B2B587212F93DA0055EE30 /* Sources */,
+				96B2B588212F93DA0055EE30 /* Frameworks */,
+				96B2B589212F93DA0055EE30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96B2B58D212F93DA0055EE30 /* PBXTargetDependency */,
+			);
+			name = TEDTalkRaterTests;
+			productName = TEDTalkRaterTests;
+			productReference = 96B2B58B212F93DA0055EE30 /* TEDTalkRaterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		96B2B595212F93DA0055EE30 /* TEDTalkRaterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96B2B5A5212F93DA0055EE30 /* Build configuration list for PBXNativeTarget "TEDTalkRaterUITests" */;
+			buildPhases = (
+				96B2B592212F93DA0055EE30 /* Sources */,
+				96B2B593212F93DA0055EE30 /* Frameworks */,
+				96B2B594212F93DA0055EE30 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				96B2B598212F93DA0055EE30 /* PBXTargetDependency */,
+			);
+			name = TEDTalkRaterUITests;
+			productName = TEDTalkRaterUITests;
+			productReference = 96B2B596212F93DA0055EE30 /* TEDTalkRaterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96B2B56C212F93D60055EE30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = bmassengill;
+				TargetAttributes = {
+					96B2B573212F93D60055EE30 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					96B2B58A212F93DA0055EE30 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 96B2B573212F93D60055EE30;
+					};
+					96B2B595212F93DA0055EE30 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 96B2B573212F93D60055EE30;
+					};
+				};
+			};
+			buildConfigurationList = 96B2B56F212F93D60055EE30 /* Build configuration list for PBXProject "TEDTalkRater" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 96B2B56B212F93D60055EE30;
+			productRefGroup = 96B2B575212F93D60055EE30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96B2B573212F93D60055EE30 /* TEDTalkRater */,
+				96B2B58A212F93DA0055EE30 /* TEDTalkRaterTests */,
+				96B2B595212F93DA0055EE30 /* TEDTalkRaterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96B2B572212F93D60055EE30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B2B585212F93DA0055EE30 /* LaunchScreen.storyboard in Resources */,
+				96B2B5B2212FB10D0055EE30 /* rickroll.jpg in Resources */,
+				96B2B5AF212F9BF60055EE30 /* CodeChallenge.csv in Resources */,
+				96B2B582212F93DA0055EE30 /* Assets.xcassets in Resources */,
+				96B2B5B6212FB3700055EE30 /* RickRollViewController.xib in Resources */,
+				96B2B5B4212FB12A0055EE30 /* rickroll.mp3 in Resources */,
+				96B2B5BA212FB7280055EE30 /* TalksTabsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B2B589212F93DA0055EE30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B2B594212F93DA0055EE30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4BE972641589F2FF4F825431 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TEDTalkRater-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7EF52511126CD6B47AC4C15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TEDTalkRater/Pods-TEDTalkRater-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CSV.swift/CSV.framework",
+				"${BUILT_PRODUCTS_DIR}/DataManager/DataManager.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CSV.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DataManager.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TEDTalkRater/Pods-TEDTalkRater-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96B2B570212F93D60055EE30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B2B5AC212F96110055EE30 /* CSVParseService.swift in Sources */,
+				96B2B5B8212FB7180055EE30 /* TalksTabsViewController.swift in Sources */,
+				96B2B57A212F93D60055EE30 /* RickRollViewController.swift in Sources */,
+				96B2B580212F93D60055EE30 /* TEDTalkRater.xcdatamodeld in Sources */,
+				96B2B578212F93D60055EE30 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B2B587212F93DA0055EE30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B2B590212F93DA0055EE30 /* TEDTalkRaterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96B2B592212F93DA0055EE30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96B2B59B212F93DA0055EE30 /* TEDTalkRaterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		96B2B58D212F93DA0055EE30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96B2B573212F93D60055EE30 /* TEDTalkRater */;
+			targetProxy = 96B2B58C212F93DA0055EE30 /* PBXContainerItemProxy */;
+		};
+		96B2B598212F93DA0055EE30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 96B2B573212F93D60055EE30 /* TEDTalkRater */;
+			targetProxy = 96B2B597212F93DA0055EE30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		96B2B583212F93DA0055EE30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96B2B584212F93DA0055EE30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		96B2B59D212F93DA0055EE30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		96B2B59E212F93DA0055EE30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		96B2B5A0212F93DA0055EE30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C5AFF0A5A89311872A84C14 /* Pods-TEDTalkRater.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z6M7AS8JT;
+				INFOPLIST_FILE = TEDTalkRater/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmassengill.TEDTalkRater;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		96B2B5A1212F93DA0055EE30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97F3497E17638B1EC8AEE356 /* Pods-TEDTalkRater.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z6M7AS8JT;
+				INFOPLIST_FILE = TEDTalkRater/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmassengill.TEDTalkRater;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		96B2B5A3212F93DA0055EE30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z6M7AS8JT;
+				INFOPLIST_FILE = TEDTalkRaterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmassengill.TEDTalkRaterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEDTalkRater.app/TEDTalkRater";
+			};
+			name = Debug;
+		};
+		96B2B5A4212F93DA0055EE30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z6M7AS8JT;
+				INFOPLIST_FILE = TEDTalkRaterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmassengill.TEDTalkRaterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TEDTalkRater.app/TEDTalkRater";
+			};
+			name = Release;
+		};
+		96B2B5A6212F93DA0055EE30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z6M7AS8JT;
+				INFOPLIST_FILE = TEDTalkRaterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmassengill.TEDTalkRaterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TEDTalkRater;
+			};
+			name = Debug;
+		};
+		96B2B5A7212F93DA0055EE30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6Z6M7AS8JT;
+				INFOPLIST_FILE = TEDTalkRaterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bmassengill.TEDTalkRaterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TEDTalkRater;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96B2B56F212F93D60055EE30 /* Build configuration list for PBXProject "TEDTalkRater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B2B59D212F93DA0055EE30 /* Debug */,
+				96B2B59E212F93DA0055EE30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B2B59F212F93DA0055EE30 /* Build configuration list for PBXNativeTarget "TEDTalkRater" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B2B5A0212F93DA0055EE30 /* Debug */,
+				96B2B5A1212F93DA0055EE30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B2B5A2212F93DA0055EE30 /* Build configuration list for PBXNativeTarget "TEDTalkRaterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B2B5A3212F93DA0055EE30 /* Debug */,
+				96B2B5A4212F93DA0055EE30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96B2B5A5212F93DA0055EE30 /* Build configuration list for PBXNativeTarget "TEDTalkRaterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96B2B5A6212F93DA0055EE30 /* Debug */,
+				96B2B5A7212F93DA0055EE30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		96B2B57E212F93D60055EE30 /* TEDTalkRater.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				96B2B57F212F93D60055EE30 /* TEDTalkRater.xcdatamodel */,
+			);
+			currentVersion = 96B2B57F212F93D60055EE30 /* TEDTalkRater.xcdatamodel */;
+			path = TEDTalkRater.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 96B2B56C212F93D60055EE30 /* Project object */;
+}

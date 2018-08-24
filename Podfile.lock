@@ -1,0 +1,20 @@
+PODS:
+  - CSV.swift (2.2.1)
+  - DataManager (1.0.0)
+
+DEPENDENCIES:
+  - CSV.swift (~> 2.2)
+  - DataManager
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CSV.swift
+    - DataManager
+
+SPEC CHECKSUMS:
+  CSV.swift: 5bf3338aff82371cb51cc6dc559d7b45a74bab14
+  DataManager: 79a945a2c118c6a0286a1365a642b64765e7a65b
+
+PODFILE CHECKSUM: c0f3c6aed85111d5de2896787a0abf96f052e3f6
+
+COCOAPODS: 1.5.2
