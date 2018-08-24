@@ -19,28 +19,47 @@ class CSVParseService {
     
     // MARK: - Data Load Methods
     
-    func loadCSVData() {
+    func loadCSVData(completion: @escaping (([TEDTalk]) -> Void)) {
         
-        guard let pathForFile = Bundle.main.path(forResource: csvFileName, ofType: "csv"), let stream = InputStream(fileAtPath: pathForFile) else {
+        DispatchQueue.global(qos: .background).async {
             
-            print("Couldn't read CSV")
-            return
-        }
-        
-        do {
-        
-            let csv = try CSVReader(stream: stream, hasHeaderRow: true)
+            var tedTalks:[TEDTalk] = []
             
-            let headerRow = csv.headerRow!
-            print("\(headerRow)")
+            defer {
+                DispatchQueue.main.async {
+                    completion(tedTalks)
+                }
+            }
             
-//            while let row = csv.next() {
-//                print("\(row)")
-//            }
-        }
-        catch {
+            guard let pathForFile = Bundle.main.path(forResource: self.csvFileName, ofType: "csv"), let stream = InputStream(fileAtPath: pathForFile) else {
+                
+                print("Couldn't read CSV")
+                return
+            }
             
-            print("Exception during CSV parse")
+            do {
+            
+                let csv = try CSVReader(stream: stream, hasHeaderRow: true)
+                
+                let headerRow = csv.headerRow!
+                print("\(headerRow)")
+                
+                while csv.next() != nil {
+                
+                    guard let title = csv["title"], let description = csv["description"] else {
+                        print("Parse error")
+                        return
+                    }
+                    
+                    let talk = TEDTalk(title: title, talkDescription: description)
+                    tedTalks.append(talk)
+                }
+            }
+            catch {
+                
+                print("Exception during CSV parse")
+            }
+            
         }
     }
 }
