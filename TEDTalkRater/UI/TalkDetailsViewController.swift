@@ -41,8 +41,17 @@ class TalkDetailsViewController: UIViewController {
         
         super.viewDidLoad()
         
-        self.titleLabel.text = tedTalk.title
-        self.descriptionLabel.text = tedTalk.talkDescription
-        self.presenterLabel.text = Constants.Labels.presenterLabel + tedTalk.speaker
+        titleLabel.text = tedTalk.title
+        descriptionLabel.text = tedTalk.talkDescription
+        presenterLabel.text = Constants.Labels.presenterLabel + tedTalk.speaker
+        
+        ratingView.didFinishTouchingCosmos = { rating in
+            self.ratingChanged(rating: rating)
+        }
+    }
+    
+    func ratingChanged(rating: Double) {
+        
+        print("rating: \(rating)")
     }
 }
