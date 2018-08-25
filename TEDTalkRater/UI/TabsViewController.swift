@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import PureLayout
 
 class TabsViewController: UIViewController, UITabBarDelegate {
     
@@ -16,6 +17,7 @@ class TabsViewController: UIViewController, UITabBarDelegate {
     @IBOutlet var tabContainerView: UIView!
     @IBOutlet weak var talksTab: UITabBarItem!
     @IBOutlet weak var ratingsTab: UITabBarItem!
+    @IBOutlet weak var tabBar: UITabBar!
     
     var talksViewController: TalksViewController
     
@@ -40,13 +42,14 @@ class TabsViewController: UIViewController, UITabBarDelegate {
         super.viewDidLoad()
         
         tabContainerView.addSubview(talksViewController.view)
-//        talksViewController.pin
+        talksViewController.view.autoPinEdgesToSuperviewEdges()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         
+        tabBar.selectedItem = talksTab
         showTalksTab()
     }
     
@@ -56,9 +59,11 @@ class TabsViewController: UIViewController, UITabBarDelegate {
         
         if item == talksTab {
             
+            showTalksTab()
         }
         else {
             
+            showRatingsTab()
         }
     }
     

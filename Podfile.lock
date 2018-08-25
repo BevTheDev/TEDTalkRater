@@ -2,23 +2,27 @@ PODS:
   - CSV.swift (2.2.1)
   - DataManager (1.0.0)
   - MBProgressHUD (1.1.0)
+  - PureLayout (3.0.2)
 
 DEPENDENCIES:
   - CSV.swift (~> 2.2)
   - DataManager
   - MBProgressHUD (~> 1.1)
+  - PureLayout (~> 3.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - CSV.swift
     - DataManager
     - MBProgressHUD
+    - PureLayout
 
 SPEC CHECKSUMS:
   CSV.swift: 5bf3338aff82371cb51cc6dc559d7b45a74bab14
   DataManager: 79a945a2c118c6a0286a1365a642b64765e7a65b
   MBProgressHUD: e7baa36a220447d8aeb12769bf0585582f3866d9
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
 
-PODFILE CHECKSUM: 11596d3fe76988dc0df139551a431fadeda10335
+PODFILE CHECKSUM: b9e22227f039f049e2ae6fe83288801a25269488
 
 COCOAPODS: 1.5.2
