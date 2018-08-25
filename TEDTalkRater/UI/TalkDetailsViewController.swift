@@ -15,16 +15,15 @@ class TalkDetailsViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var presenterLabel: UILabel!
     
-    let titleText: String
-    let descriptionText: String
+    let tedTalk: TEDTalk
     
     // MARK: - Init
     
-    init(title: String, descriptionText: String) {
+    init(tedTalk: TEDTalk) {
         
-        self.titleText = title
-        self.descriptionText = descriptionText
+        self.tedTalk = tedTalk
         
         super.init(nibName: TalkDetailsViewController.className(), bundle: Bundle.main)
     }
@@ -40,7 +39,8 @@ class TalkDetailsViewController: UIViewController {
         
         super.viewDidLoad()
         
-        self.titleLabel.text = titleText
-        self.descriptionLabel.text = descriptionText
+        self.titleLabel.text = tedTalk.title
+        self.descriptionLabel.text = tedTalk.talkDescription
+        self.presenterLabel.text = Constants.Labels.presenterLabel + tedTalk.speaker
     }
 }

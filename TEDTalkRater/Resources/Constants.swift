@@ -15,4 +15,9 @@ struct Constants {
         static let talksScreenTitle = "TEDTalks"
         static let ratingsScreenTitle = "Ratings"
     }
+    
+    struct Labels {
+        
+        static let presenterLabel = "Presenter: "
+    }
 }

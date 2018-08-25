@@ -12,11 +12,13 @@ class TEDTalk: NSObject {
     
     let talkDescription: String
     let title: String
+    let speaker: String
     
-    init(title: String, talkDescription: String) {
+    init(title: String, talkDescription: String, speaker: String) {
         
         self.title = title
         self.talkDescription = talkDescription
+        self.speaker = speaker
         
         super.init()
     }

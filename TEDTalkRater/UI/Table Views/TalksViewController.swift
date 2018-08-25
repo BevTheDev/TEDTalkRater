@@ -78,7 +78,7 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
         tableView.deselectRow(at: indexPath, animated: true)
         
         let talk = tedTalks[indexPath.row]
-        let talkDetailsVC = TalkDetailsViewController(title: talk.title, descriptionText: talk.talkDescription)
+        let talkDetailsVC = TalkDetailsViewController(tedTalk: talk)
         
         navigationController?.pushViewController(talkDetailsVC, animated: true)
     }

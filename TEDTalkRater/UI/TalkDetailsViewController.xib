@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TalkDetailsViewController" customModule="TEDTalkRater" customModuleProvider="target">
             <connections>
                 <outlet property="descriptionLabel" destination="3pb-v7-OY6" id="0Z5-4d-nK5"/>
+                <outlet property="presenterLabel" destination="DU9-Ig-rIl" id="AHN-Bv-YXz"/>
                 <outlet property="titleLabel" destination="36c-rT-Nvq" id="DuL-7K-ftX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="A1t-ZM-tTb"/>
             </connections>
@@ -29,7 +30,13 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pb-v7-OY6">
-                    <rect key="frame" x="16" y="84" width="343" height="20.5"/>
+                    <rect key="frame" x="16" y="134.5" width="343" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presenter: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU9-Ig-rIl">
+                    <rect key="frame" x="16" y="94" width="343" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -37,12 +44,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="DU9-Ig-rIl" firstAttribute="top" secondItem="36c-rT-Nvq" secondAttribute="bottom" constant="30" id="EDM-VY-b1y"/>
                 <constraint firstItem="36c-rT-Nvq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="Frm-QF-hQQ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="DU9-Ig-rIl" secondAttribute="trailing" constant="16" id="LJq-SR-9Hu"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="36c-rT-Nvq" secondAttribute="trailing" constant="16" id="Qcg-cA-VTW"/>
-                <constraint firstItem="3pb-v7-OY6" firstAttribute="top" secondItem="36c-rT-Nvq" secondAttribute="bottom" constant="20" id="Ym9-oc-fwg"/>
                 <constraint firstItem="36c-rT-Nvq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="d54-hB-Qok"/>
                 <constraint firstItem="3pb-v7-OY6" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="fl4-zC-7t3"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="3pb-v7-OY6" secondAttribute="trailing" constant="16" id="rod-hf-LyV"/>
+                <constraint firstItem="DU9-Ig-rIl" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="rrp-sS-IXe"/>
+                <constraint firstItem="3pb-v7-OY6" firstAttribute="top" secondItem="DU9-Ig-rIl" secondAttribute="bottom" constant="20" id="ueV-Kn-1Cn"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="-84.5" y="-211.5"/>

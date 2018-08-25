@@ -48,12 +48,14 @@ class CSVParseService {
                 for _ in 0...100 {
                     csv.next()
                     
-                    guard let title = csv["title"], let description = csv["description"] else {
+                    guard let title = csv["title"],
+                        let description = csv["description"],
+                        let speaker = csv["main_speaker"] else {
                         print("Parse error")
                         return
                     }
                     
-                    let talk = TEDTalk(title: title, talkDescription: description)
+                    let talk = TEDTalk(title: title, talkDescription: description, speaker: speaker)
                     tedTalks.append(talk)
                 }
             }
