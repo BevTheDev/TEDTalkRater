@@ -15,9 +15,9 @@ class RickRollViewController: UIViewController {
     
     // MARK: - View Lifecycle
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         
-        super.viewDidAppear(animated)
+        super.viewWillAppear(animated)
         
         playDaSong()
     }
@@ -25,10 +25,6 @@ class RickRollViewController: UIViewController {
     // MARK: - Logic
     
     func playDaSong() {
-        
-        // This is the easter egg
-        // Shake gesture (Cmd + Ctrl + Z) to activate
-        // Make sure your sound is on :)
         
         guard let url = Bundle.main.url(forResource: "rickroll", withExtension: "mp3") else { return }
         

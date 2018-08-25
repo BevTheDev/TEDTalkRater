@@ -77,4 +77,20 @@ class TabsViewController: UIViewController, UITabBarDelegate {
     func showRatingsTab() {
         
     }
+    
+    // MARK: - Just For Fun
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        
+        // Shake gesture (Cmd + Ctrl + Z) to activate
+        // Make sure your sound is on :)
+        
+        if motion == .motionShake {
+            
+            print("Shake detected. RickRolling...")
+            
+            let rickRoll = RickRollViewController()
+            present(rickRoll, animated: true, completion: nil)
+        }
+    }
 }
