@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import MBProgressHUD
 
-class TalksViewController: UIViewController {
+class TalksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - Properties
     
@@ -19,12 +19,15 @@ class TalksViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     
     var tedTalks: [TEDTalk] = []
+    let reuseIdentifier = "reuseIdentifier"
     
     // MARK: - View Lifecycle
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         
         handleDataChange()
         
@@ -49,5 +52,28 @@ class TalksViewController: UIViewController {
         guard !tedTalks.isEmpty else { return }
         
         tableView.reloadData()
+    }
+    
+    // MARK: - UITableView Methods
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return tedTalks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) else {
+            fatalError("Could not generate a cell")
+        }
+        
+        cell.textLabel?.text = tedTalks[indexPath.row].title
+        cell.accessoryType = .disclosureIndicator
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 }
