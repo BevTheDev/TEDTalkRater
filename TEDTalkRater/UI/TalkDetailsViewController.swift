@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Cosmos
 
 class TalkDetailsViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class TalkDetailsViewController: UIViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var presenterLabel: UILabel!
+    @IBOutlet weak var ratingView: CosmosView!
     
     let tedTalk: TEDTalk
     
