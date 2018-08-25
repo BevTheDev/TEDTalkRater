@@ -44,8 +44,10 @@ class CSVParseService {
                 let headerRow = csv.headerRow!
                 print("\(headerRow)")
                 
-                while csv.next() != nil {
-                
+//                while csv.next() != nil {
+                for _ in 0...100 {
+                    csv.next()
+                    
                     guard let title = csv["title"], let description = csv["description"] else {
                         print("Parse error")
                         return

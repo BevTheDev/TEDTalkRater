@@ -43,6 +43,7 @@ class TabsViewController: UIViewController, UITabBarDelegate {
         
         tabContainerView.addSubview(talksViewController.view)
         talksViewController.view.autoPinEdgesToSuperviewEdges()
+        self.addChildViewController(talksViewController)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -71,6 +72,7 @@ class TabsViewController: UIViewController, UITabBarDelegate {
     
     func showTalksTab() {
         
+        title = Constants.ScreenTitles.talksScreenTitle
         view.bringSubview(toFront: talksViewController.view)
     }
     
