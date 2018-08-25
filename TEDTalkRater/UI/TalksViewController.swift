@@ -18,25 +18,36 @@ class TalksViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    var tedTalks: [TEDTalk] = []
+    
+    // MARK: - View Lifecycle
+    
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        handleDataChange()
         
         MBProgressHUD.showAdded(to: view, animated: true)
         
         CSVParseService.shared.loadCSVData { talks in
             
             print("Loaded \(talks.count) CSV items")
+            
+            self.tedTalks = talks
+            self.handleDataChange()
+            
             MBProgressHUD.hide(for: self.view, animated: true)
         }
     }
     
-    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+    func handleDataChange() {
         
-        if motion == .motionShake {
-            
-            print("Shake detected. RickRolling...")
-            
-            let rickRoll = RickRollViewController()
-            present(rickRoll, animated: true, completion: nil)
-        }
+        noDataLabel.isHidden = !tedTalks.isEmpty
+        tableView.isHidden = tedTalks.isEmpty
+        
+        guard !tedTalks.isEmpty else { return }
+        
+        tableView.reloadData()
     }
 }
