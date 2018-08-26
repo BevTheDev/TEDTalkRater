@@ -43,9 +43,9 @@ class TalkDetailsViewController: UIViewController {
         
         super.viewDidLoad()
         
-        titleLabel.text = tedTalk.title
-        descriptionLabel.text = tedTalk.talkDescription
-        presenterLabel.text = Constants.Labels.presenterLabel + tedTalk.speaker
+        titleLabel.text = tedTalk.titleText
+        descriptionLabel.text = tedTalk.descriptionText
+        presenterLabel.text = Constants.Labels.presenterLabel + tedTalk.presenter
         
         loadRating()
     }

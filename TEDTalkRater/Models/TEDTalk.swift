@@ -10,15 +10,15 @@ import Foundation
 
 class TEDTalk: NSObject {
     
-    let talkDescription: String
-    let title: String
-    let speaker: String
+    let descriptionText: String
+    let titleText: String
+    let presenter: String
     
-    init(title: String, talkDescription: String, speaker: String) {
+    init(title: String, description: String, presenter: String) {
         
-        self.title = title
-        self.talkDescription = talkDescription
-        self.speaker = speaker
+        self.titleText = title
+        self.descriptionText = description
+        self.presenter = presenter
         
         super.init()
     }

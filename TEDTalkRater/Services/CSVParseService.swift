@@ -55,7 +55,7 @@ class CSVParseService {
                         return
                     }
                     
-                    let talk = TEDTalk(title: title, talkDescription: description, speaker: speaker)
+                    let talk = TEDTalk(title: title, description: description, presenter: speaker)
                     tedTalks.append(talk)
                 }
             }

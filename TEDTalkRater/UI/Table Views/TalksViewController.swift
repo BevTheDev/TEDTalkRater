@@ -67,7 +67,7 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
             fatalError("Could not generate a cell")
         }
         
-        cell.textLabel?.text = tedTalks[indexPath.row].title
+        cell.textLabel?.text = tedTalks[indexPath.row].titleText
         cell.accessoryType = .disclosureIndicator
         
         return cell
