@@ -57,4 +57,14 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let talk = ratedTalks[indexPath.row]
+        let talkDetailsVC = TalkDetailsViewController(tedTalk: talk)
+        
+        navigationController?.pushViewController(talkDetailsVC, animated: true)
+    }
 }
