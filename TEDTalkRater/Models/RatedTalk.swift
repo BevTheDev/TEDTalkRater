@@ -25,6 +25,6 @@ public class RatedTalk: NSManagedObject {
         self.titleText = title
         self.descriptionText = description
         self.presenter = presenter
-        self.rating = Int64(rating)
+        self.rating = Int16(rating)
     }
 }

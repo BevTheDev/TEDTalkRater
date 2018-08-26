@@ -14,5 +14,5 @@ extension RatedTalk {
     @NSManaged public var titleText: String
     @NSManaged public var descriptionText: String
     @NSManaged public var presenter: String
-    @NSManaged public var rating: Int64
+    @NSManaged public var rating: Int16
 }
