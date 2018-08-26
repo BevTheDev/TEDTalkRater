@@ -49,10 +49,11 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .value1, reuseIdentifier: reuseIdentifier)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .subtitle, reuseIdentifier: reuseIdentifier)
         
-        cell.textLabel?.text = ratedTalks[indexPath.row].titleText
-        cell.detailTextLabel?.text = "\(ratedTalks[indexPath.row].rating)" + Constants.Labels.starsLabel
+        let talk = ratedTalks[indexPath.row]
+        cell.textLabel?.text = talk.titleText
+        cell.detailTextLabel?.text = "\(talk.rating)" + Constants.Labels.starsLabel
         cell.accessoryType = .disclosureIndicator
         
         return cell
