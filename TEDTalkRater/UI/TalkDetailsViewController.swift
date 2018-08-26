@@ -64,12 +64,21 @@ class TalkDetailsViewController: UIViewController {
     
     func saveRating() {
         
-        let _ = RatedTalk(title: tedTalk.title, description: tedTalk.talkDescription, presenter: tedTalk.speaker, rating: ratingView.rating)
+        let _ = RatedTalk(title: tedTalk.titleText, description: tedTalk.descriptionText, presenter: tedTalk.presenter, rating: ratingView.rating)
         DataManager.persist(synchronously: false)
     }
     
     func loadRating() {
         
-        let talks = DataManager.fetchObjects(entity: RatedTalk.self, context: DataManager.mainContext)
+        let predicate = NSPredicate(format: "%K == %@", #keyPath(RatedTalk.titleText), tedTalk.titleText)
+        let fetchedResults = DataManager.fetchObjects(entity: RatedTalk.self, predicate: predicate, context: DataManager.mainContext)
+        
+        guard let ratedTalk = fetchedResults.first else {
+            
+            ratingView.rating = 0
+            return
+        }
+        
+        ratingView.rating = Double(ratedTalk.rating)
     }
 }
