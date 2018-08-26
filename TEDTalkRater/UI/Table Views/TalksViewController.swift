@@ -10,7 +10,7 @@ import UIKit
 import Foundation
 import MBProgressHUD
 
-class TalksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TalksViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
     
     // MARK: - Properties
     
@@ -19,7 +19,9 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var searchBar: UISearchBar!
     
     var tedTalks: [TEDTalk] = []
+    var filteredTalks: [TEDTalk] = []
     let reuseIdentifier = "reuseIdentifier"
+    var isFiltering = false
     
     // MARK: - View Lifecycle
     
@@ -44,6 +46,13 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        exitFilterMode()
+        
+        super.viewWillDisappear(animated)
+    }
+    
     func handleDataChange() {
         
         noDataLabel.isHidden = !tedTalks.isEmpty
@@ -58,7 +67,8 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return tedTalks.count
+        let count = isFiltering ? filteredTalks.count : tedTalks.count
+        return count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -67,7 +77,9 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
             fatalError("Could not generate a cell")
         }
         
-        cell.textLabel?.text = tedTalks[indexPath.row].titleText
+        let talk = isFiltering ? filteredTalks[indexPath.row] : tedTalks[indexPath.row]
+        
+        cell.textLabel?.text = talk.titleText
         cell.accessoryType = .disclosureIndicator
         
         return cell
@@ -77,9 +89,40 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let talk = tedTalks[indexPath.row]
+        let talk = isFiltering ? filteredTalks[indexPath.row] : tedTalks[indexPath.row]
         let talkDetailsVC = TalkDetailsViewController(tedTalk: talk)
         
         navigationController?.pushViewController(talkDetailsVC, animated: true)
+    }
+    
+    // MARK: - Search Bar Methods
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        isFiltering = true
+        
+        if searchText.isEmpty {
+            filteredTalks = tedTalks
+        }
+        else {
+            filteredTalks = tedTalks.filter({$0.titleText.lowercased().contains(searchText.lowercased())})
+        }
+        
+        tableView.reloadData()
+    }
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        
+        exitFilterMode()
+        
+        tableView.reloadData()
+    }
+    
+    func exitFilterMode() {
+        
+        isFiltering = false
+        filteredTalks = []
+        searchBar.text = ""
+        searchBar.resignFirstResponder()
     }
 }
