@@ -19,5 +19,6 @@ struct Constants {
     struct Labels {
         
         static let presenterLabel = "Presenter: "
+        static let starsLabel = " Stars"
     }
 }

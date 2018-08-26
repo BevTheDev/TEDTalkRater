@@ -16,23 +16,20 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
     // MARK: - Properties
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var noRatingsLabel: UILabel!
     var ratedTalks: [TEDTalk] = []
     let reuseIdentifier = "reuseIdentifier"
     
     // MARK: - View Lifecycle
-    
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
-    }
     
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)
         
         loadRatedTalks()
+        
+        noRatingsLabel.isHidden = !ratedTalks.isEmpty
+        tableView.isHidden = ratedTalks.isEmpty
     }
     
     // MARK: - Data Load
@@ -52,11 +49,11 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) else {
-            fatalError("Could not generate a cell")
-        }
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) ?? UITableViewCell(style: .value1, reuseIdentifier: reuseIdentifier)
         
         cell.textLabel?.text = ratedTalks[indexPath.row].titleText
+        cell.detailTextLabel?.text = "\(ratedTalks[indexPath.row].rating)" + Constants.Labels.starsLabel
+        cell.accessoryType = .disclosureIndicator
         
         return cell
     }
