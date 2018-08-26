@@ -16,6 +16,8 @@
 		961877CE2130F31400664BC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961877CD2130F31400664BC8 /* Constants.swift */; };
 		967D6C7B2131BE520076F524 /* TEDTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D6C7A2131BE520076F524 /* TEDTalk.swift */; };
 		967D6C7D2131BE600076F524 /* TEDTalk+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D6C7C2131BE600076F524 /* TEDTalk+CoreDataProperties.swift */; };
+		967D6C7F213327950076F524 /* RatingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D6C7E213327950076F524 /* RatingsViewController.swift */; };
+		967D6C81213327A30076F524 /* RatingsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 967D6C80213327A30076F524 /* RatingsViewController.xib */; };
 		96B2B578212F93D60055EE30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B577212F93D60055EE30 /* AppDelegate.swift */; };
 		96B2B57A212F93D60055EE30 /* RickRollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B579212F93D60055EE30 /* RickRollViewController.swift */; };
 		96B2B580212F93D60055EE30 /* TEDTalkRater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B57E212F93D60055EE30 /* TEDTalkRater.xcdatamodeld */; };
@@ -59,6 +61,8 @@
 		961877CD2130F31400664BC8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		967D6C7A2131BE520076F524 /* TEDTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEDTalk.swift; sourceTree = "<group>"; };
 		967D6C7C2131BE600076F524 /* TEDTalk+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TEDTalk+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		967D6C7E213327950076F524 /* RatingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingsViewController.swift; sourceTree = "<group>"; };
+		967D6C80213327A30076F524 /* RatingsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingsViewController.xib; sourceTree = "<group>"; };
 		96B2B574212F93D60055EE30 /* TEDTalkRater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEDTalkRater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B2B577212F93D60055EE30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96B2B579212F93D60055EE30 /* RickRollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickRollViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +118,8 @@
 			children = (
 				96B2B5B7212FB7180055EE30 /* TalksViewController.swift */,
 				96B2B5B9212FB7280055EE30 /* TalksViewController.xib */,
+				967D6C7E213327950076F524 /* RatingsViewController.swift */,
+				967D6C80213327A30076F524 /* RatingsViewController.xib */,
 			);
 			path = "Table Views";
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				961877C42130B1E400664BC8 /* TabsViewController.xib in Resources */,
+				967D6C81213327A30076F524 /* RatingsViewController.xib in Resources */,
 				96B2B585212F93DA0055EE30 /* LaunchScreen.storyboard in Resources */,
 				96B2B5B2212FB10D0055EE30 /* rickroll.jpg in Resources */,
 				96B2B5AF212F9BF60055EE30 /* CodeChallenge.csv in Resources */,
@@ -449,6 +456,7 @@
 				961877C22130B1D700664BC8 /* TabsViewController.swift in Sources */,
 				96B2B5B8212FB7180055EE30 /* TalksViewController.swift in Sources */,
 				967D6C7D2131BE600076F524 /* TEDTalk+CoreDataProperties.swift in Sources */,
+				967D6C7F213327950076F524 /* RatingsViewController.swift in Sources */,
 				961877C72130E9F100664BC8 /* TalkDetailsViewController.swift in Sources */,
 				96B2B57A212F93D60055EE30 /* RickRollViewController.swift in Sources */,
 				961877CE2130F31400664BC8 /* Constants.swift in Sources */,

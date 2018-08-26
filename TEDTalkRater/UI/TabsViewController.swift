@@ -20,12 +20,14 @@ class TabsViewController: UIViewController, UITabBarDelegate {
     @IBOutlet weak var tabBar: UITabBar!
     
     var talksViewController: TalksViewController
+    var ratingsViewController: RatingsViewController
     
     // MARK: - Init
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         
         self.talksViewController = TalksViewController()
+        self.ratingsViewController = RatingsViewController()
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -41,14 +43,13 @@ class TabsViewController: UIViewController, UITabBarDelegate {
         
         super.viewDidLoad()
         
+        tabContainerView.addSubview(ratingsViewController.view)
+        ratingsViewController.view.autoPinEdgesToSuperviewEdges()
+        self.addChildViewController(ratingsViewController)
+        
         tabContainerView.addSubview(talksViewController.view)
         talksViewController.view.autoPinEdgesToSuperviewEdges()
         self.addChildViewController(talksViewController)
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        super.viewWillAppear(animated)
         
         tabBar.selectedItem = talksTab
         showTalksTab()
@@ -73,11 +74,13 @@ class TabsViewController: UIViewController, UITabBarDelegate {
     func showTalksTab() {
         
         title = Constants.ScreenTitles.talksScreenTitle
-        view.bringSubview(toFront: talksViewController.view)
+        tabContainerView.bringSubview(toFront: talksViewController.view)
     }
     
     func showRatingsTab() {
         
+        title = Constants.ScreenTitles.ratingsScreenTitle
+        tabContainerView.bringSubview(toFront: ratingsViewController.view)
     }
     
     // MARK: - Just For Fun
