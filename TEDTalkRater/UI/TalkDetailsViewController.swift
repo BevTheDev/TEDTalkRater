@@ -21,7 +21,8 @@ class TalkDetailsViewController: UIViewController {
     @IBOutlet weak var presenterLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
     
-    let tedTalk: TEDTalk
+    let tedTalk: TEDTalk?
+    let ratedTalk: RatedTalk?
     
     // MARK: - Init
     
@@ -64,7 +65,15 @@ class TalkDetailsViewController: UIViewController {
     
     func saveRating() {
         
-        let _ = RatedTalk(title: tedTalk.titleText, description: tedTalk.descriptionText, presenter: tedTalk.presenter, rating: ratingView.rating)
+        if let savedTalk = ratedTalk {
+            
+            savedTalk.rating = Int16(ratingView.rating)
+        }
+        else {
+            
+            let _ = RatedTalk(title: tedTalk.titleText, description: tedTalk.descriptionText, presenter: tedTalk.presenter, rating: ratingView.rating)
+        }
+        
         DataManager.persist(synchronously: false)
     }
     
