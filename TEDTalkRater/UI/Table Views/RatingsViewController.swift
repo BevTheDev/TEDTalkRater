@@ -36,7 +36,11 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func loadRatedTalks() {
         
-        ratedTalks = DataManager.fetchObjects(entity: TEDTalk.self, context: DataManager.mainContext)
+        let ratingSortDescriptor = NSSortDescriptor(key: #keyPath(TEDTalk.rating), ascending: false)
+        let titleSortDescriptor = NSSortDescriptor(key: #keyPath(TEDTalk.titleText), ascending: true)
+        
+        ratedTalks = DataManager.fetchObjects(entity: TEDTalk.self, sortDescriptors: [ratingSortDescriptor, titleSortDescriptor], context: DataManager.mainContext)
+        
         tableView.reloadData()
     }
     
