@@ -21,8 +21,7 @@ class TalkDetailsViewController: UIViewController {
     @IBOutlet weak var presenterLabel: UILabel!
     @IBOutlet weak var ratingView: CosmosView!
     
-    let tedTalk: TEDTalk?
-    let ratedTalk: RatedTalk?
+    let tedTalk: TEDTalk
     
     // MARK: - Init
     
@@ -47,6 +46,7 @@ class TalkDetailsViewController: UIViewController {
         titleLabel.text = tedTalk.titleText
         descriptionLabel.text = tedTalk.descriptionText
         presenterLabel.text = Constants.Labels.presenterLabel + tedTalk.presenter
+        ratingView.rating = Double(tedTalk.rating)
         
         loadRating()
     }
@@ -65,13 +65,13 @@ class TalkDetailsViewController: UIViewController {
     
     func saveRating() {
         
-        if let savedTalk = ratedTalk {
+        if let fetchedTalk = fetchSavedRating() {
             
-            savedTalk.rating = Int16(ratingView.rating)
+            fetchedTalk.rating = Int16(ratingView.rating)
         }
         else {
             
-            let _ = RatedTalk(title: tedTalk.titleText, description: tedTalk.descriptionText, presenter: tedTalk.presenter, rating: ratingView.rating)
+            let _ = TEDTalk(title: tedTalk.titleText, description: tedTalk.descriptionText, presenter: tedTalk.presenter, rating: ratingView.rating, context: DataManager.mainContext)
         }
         
         DataManager.persist(synchronously: false)
@@ -79,15 +79,16 @@ class TalkDetailsViewController: UIViewController {
     
     func loadRating() {
         
-        let predicate = NSPredicate(format: "%K == %@", #keyPath(RatedTalk.titleText), tedTalk.titleText)
-        let fetchedResults = DataManager.fetchObjects(entity: RatedTalk.self, predicate: predicate, context: DataManager.mainContext)
+        guard let fetchedTalk = fetchSavedRating() else { return }
         
-        guard let ratedTalk = fetchedResults.first else {
-            
-            ratingView.rating = 0
-            return
-        }
+        ratingView.rating = Double(fetchedTalk.rating)
+    }
+    
+    func fetchSavedRating() -> TEDTalk? {
         
-        ratingView.rating = Double(ratedTalk.rating)
+        let predicate = NSPredicate(format: "%K == %@", #keyPath(TEDTalk.titleText), tedTalk.titleText)
+        let fetchedResults = DataManager.fetchObjects(entity: TEDTalk.self, predicate: predicate, context: DataManager.mainContext)
+        
+        return fetchedResults.first
     }
 }

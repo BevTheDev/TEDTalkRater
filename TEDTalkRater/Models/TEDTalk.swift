@@ -2,24 +2,29 @@
 //  TEDTalk.swift
 //  TEDTalkRater
 //
-//  Created by Beverly Massengill on 8/24/18.
+//  Created by Beverly Massengill on 8/25/18.
 //  Copyright © 2018 bmassengill. All rights reserved.
 //
 
 import Foundation
+import CoreData
+import DataManager
 
-class TEDTalk: NSObject {
+@objc(TEDTalk)
+public class TEDTalk: NSManagedObject {
     
-    let descriptionText: String
-    let titleText: String
-    let presenter: String
-    
-    init(title: String, description: String, presenter: String) {
+    convenience init(title: String, description: String, presenter: String, rating: Double, context: NSManagedObjectContext? = nil) {
+        
+        guard let entity = NSEntityDescription.entity(forEntityName: "TEDTalk", in: DataManager.mainContext) else {
+            
+            fatalError("Entity creation failed")
+        }
+        
+        self.init(entity: entity, insertInto: context)
         
         self.titleText = title
         self.descriptionText = description
         self.presenter = presenter
-        
-        super.init()
+        self.rating = Int16(rating)
     }
 }

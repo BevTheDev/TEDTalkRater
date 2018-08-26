@@ -55,7 +55,8 @@ class CSVParseService {
                         return
                     }
                     
-                    let talk = TEDTalk(title: title, description: description, presenter: speaker)
+                    // These are being inserted into a nil context to prevent them from saving to CoreData until a rating is added by the user
+                    let talk = TEDTalk(title: title, description: description, presenter: speaker, rating: 0)
                     tedTalks.append(talk)
                 }
             }

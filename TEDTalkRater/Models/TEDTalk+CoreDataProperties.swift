@@ -1,5 +1,5 @@
 //
-//  RatedTalk+CoreDataProperties.swift
+//  TEDTalk+CoreDataProperties.swift
 //  TEDTalkRater
 //
 //  Created by Beverly Massengill on 8/25/18.
@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-extension RatedTalk {
+extension TEDTalk {
     
     @NSManaged public var titleText: String
     @NSManaged public var descriptionText: String

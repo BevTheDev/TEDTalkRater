@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7365A071B2D219C44B8F7C75 /* Pods_TEDTalkRater.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6D0DFDA094FC5A3DD2C47A /* Pods_TEDTalkRater.framework */; };
-		961877C02130760F00664BC8 /* TEDTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961877BF2130760F00664BC8 /* TEDTalk.swift */; };
 		961877C22130B1D700664BC8 /* TabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961877C12130B1D700664BC8 /* TabsViewController.swift */; };
 		961877C42130B1E400664BC8 /* TabsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 961877C32130B1E400664BC8 /* TabsViewController.xib */; };
 		961877C72130E9F100664BC8 /* TalkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961877C62130E9F100664BC8 /* TalkDetailsViewController.swift */; };
 		961877C92130EA2200664BC8 /* TalkDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 961877C82130EA2200664BC8 /* TalkDetailsViewController.xib */; };
 		961877CC2130EF5700664BC8 /* UIViewController+TEDTalkRater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961877CB2130EF5700664BC8 /* UIViewController+TEDTalkRater.swift */; };
 		961877CE2130F31400664BC8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961877CD2130F31400664BC8 /* Constants.swift */; };
-		967D6C7B2131BE520076F524 /* RatedTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D6C7A2131BE520076F524 /* RatedTalk.swift */; };
-		967D6C7D2131BE600076F524 /* RatedTalk+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D6C7C2131BE600076F524 /* RatedTalk+CoreDataProperties.swift */; };
+		967D6C7B2131BE520076F524 /* TEDTalk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D6C7A2131BE520076F524 /* TEDTalk.swift */; };
+		967D6C7D2131BE600076F524 /* TEDTalk+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967D6C7C2131BE600076F524 /* TEDTalk+CoreDataProperties.swift */; };
 		96B2B578212F93D60055EE30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B577212F93D60055EE30 /* AppDelegate.swift */; };
 		96B2B57A212F93D60055EE30 /* RickRollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B579212F93D60055EE30 /* RickRollViewController.swift */; };
 		96B2B580212F93D60055EE30 /* TEDTalkRater.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96B2B57E212F93D60055EE30 /* TEDTalkRater.xcdatamodeld */; };
@@ -52,15 +51,14 @@
 
 /* Begin PBXFileReference section */
 		2C5AFF0A5A89311872A84C14 /* Pods-TEDTalkRater.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TEDTalkRater.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TEDTalkRater/Pods-TEDTalkRater.debug.xcconfig"; sourceTree = "<group>"; };
-		961877BF2130760F00664BC8 /* TEDTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEDTalk.swift; sourceTree = "<group>"; };
 		961877C12130B1D700664BC8 /* TabsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsViewController.swift; sourceTree = "<group>"; };
 		961877C32130B1E400664BC8 /* TabsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabsViewController.xib; sourceTree = "<group>"; };
 		961877C62130E9F100664BC8 /* TalkDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TalkDetailsViewController.swift; sourceTree = "<group>"; };
 		961877C82130EA2200664BC8 /* TalkDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TalkDetailsViewController.xib; sourceTree = "<group>"; };
 		961877CB2130EF5700664BC8 /* UIViewController+TEDTalkRater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TEDTalkRater.swift"; sourceTree = "<group>"; };
 		961877CD2130F31400664BC8 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		967D6C7A2131BE520076F524 /* RatedTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatedTalk.swift; sourceTree = "<group>"; };
-		967D6C7C2131BE600076F524 /* RatedTalk+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RatedTalk+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		967D6C7A2131BE520076F524 /* TEDTalk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEDTalk.swift; sourceTree = "<group>"; };
+		967D6C7C2131BE600076F524 /* TEDTalk+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TEDTalk+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		96B2B574212F93D60055EE30 /* TEDTalkRater.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TEDTalkRater.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B2B577212F93D60055EE30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96B2B579212F93D60055EE30 /* RickRollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickRollViewController.swift; sourceTree = "<group>"; };
@@ -199,9 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				96B2B57E212F93D60055EE30 /* TEDTalkRater.xcdatamodeld */,
-				961877BF2130760F00664BC8 /* TEDTalk.swift */,
-				967D6C7A2131BE520076F524 /* RatedTalk.swift */,
-				967D6C7C2131BE600076F524 /* RatedTalk+CoreDataProperties.swift */,
+				967D6C7A2131BE520076F524 /* TEDTalk.swift */,
+				967D6C7C2131BE600076F524 /* TEDTalk+CoreDataProperties.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -448,14 +445,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				96B2B5AC212F96110055EE30 /* CSVParseService.swift in Sources */,
-				967D6C7B2131BE520076F524 /* RatedTalk.swift in Sources */,
+				967D6C7B2131BE520076F524 /* TEDTalk.swift in Sources */,
 				961877C22130B1D700664BC8 /* TabsViewController.swift in Sources */,
 				96B2B5B8212FB7180055EE30 /* TalksViewController.swift in Sources */,
-				967D6C7D2131BE600076F524 /* RatedTalk+CoreDataProperties.swift in Sources */,
+				967D6C7D2131BE600076F524 /* TEDTalk+CoreDataProperties.swift in Sources */,
 				961877C72130E9F100664BC8 /* TalkDetailsViewController.swift in Sources */,
 				96B2B57A212F93D60055EE30 /* RickRollViewController.swift in Sources */,
 				961877CE2130F31400664BC8 /* Constants.swift in Sources */,
-				961877C02130760F00664BC8 /* TEDTalk.swift in Sources */,
 				961877CC2130EF5700664BC8 /* UIViewController+TEDTalkRater.swift in Sources */,
 				96B2B580212F93D60055EE30 /* TEDTalkRater.xcdatamodeld in Sources */,
 				96B2B578212F93D60055EE30 /* AppDelegate.swift in Sources */,
