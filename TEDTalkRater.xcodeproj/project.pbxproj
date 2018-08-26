@@ -132,6 +132,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		967D6C82213348CA0076F524 /* Tab View */ = {
+			isa = PBXGroup;
+			children = (
+				961877C12130B1D700664BC8 /* TabsViewController.swift */,
+				961877C32130B1E400664BC8 /* TabsViewController.xib */,
+			);
+			path = "Tab View";
+			sourceTree = "<group>";
+		};
+		967D6C83213348DB0076F524 /* Details View */ = {
+			isa = PBXGroup;
+			children = (
+				961877C62130E9F100664BC8 /* TalkDetailsViewController.swift */,
+				961877C82130EA2200664BC8 /* TalkDetailsViewController.xib */,
+			);
+			path = "Details View";
+			sourceTree = "<group>";
+		};
 		96B2B56B212F93D60055EE30 = {
 			isa = PBXGroup;
 			children = (
@@ -190,11 +208,9 @@
 		96B2B5A8212F944F0055EE30 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				967D6C83213348DB0076F524 /* Details View */,
+				967D6C82213348CA0076F524 /* Tab View */,
 				961877C52130E9BF00664BC8 /* Table Views */,
-				961877C12130B1D700664BC8 /* TabsViewController.swift */,
-				961877C32130B1E400664BC8 /* TabsViewController.xib */,
-				961877C62130E9F100664BC8 /* TalkDetailsViewController.swift */,
-				961877C82130EA2200664BC8 /* TalkDetailsViewController.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
