@@ -20,5 +20,7 @@ struct Constants {
         
         static let presenterLabel = "Presenter: "
         static let starsLabel = " Stars"
+        static let loadingLabel = "Loading TEDTalks..."
+        static let noRatingsLabel = "No Ratings Yet"
     }
 }

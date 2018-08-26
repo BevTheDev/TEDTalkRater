@@ -22,6 +22,13 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     // MARK: - View Lifecycle
     
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        noRatingsLabel.text = Constants.Labels.noRatingsLabel
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         
         super.viewWillAppear(animated)

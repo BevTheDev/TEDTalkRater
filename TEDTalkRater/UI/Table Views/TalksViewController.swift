@@ -29,6 +29,8 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         super.viewDidLoad()
         
+        noDataLabel.text = Constants.Labels.loadingLabel
+        
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         
         handleDataChange()
