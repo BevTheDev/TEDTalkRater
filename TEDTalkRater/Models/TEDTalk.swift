@@ -13,9 +13,11 @@ import DataManager
 @objc(TEDTalk)
 public class TEDTalk: NSManagedObject {
     
+    static let entityName = "TEDTalk"
+    
     convenience init(title: String, description: String, presenter: String, rating: Double, context: NSManagedObjectContext? = nil) {
         
-        guard let entity = NSEntityDescription.entity(forEntityName: "TEDTalk", in: DataManager.mainContext) else {
+        guard let entity = NSEntityDescription.entity(forEntityName: TEDTalk.entityName, in: DataManager.mainContext) else {
             
             fatalError("Entity creation failed")
         }
