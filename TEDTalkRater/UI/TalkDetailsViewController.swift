@@ -9,6 +9,8 @@
 import Foundation
 import UIKit
 import Cosmos
+import CoreData
+import DataManager
 
 class TalkDetailsViewController: UIViewController {
     
@@ -45,13 +47,29 @@ class TalkDetailsViewController: UIViewController {
         descriptionLabel.text = tedTalk.talkDescription
         presenterLabel.text = Constants.Labels.presenterLabel + tedTalk.speaker
         
-        ratingView.didFinishTouchingCosmos = { rating in
-            self.ratingChanged(rating: rating)
-        }
+        loadRating()
     }
     
-    func ratingChanged(rating: Double) {
+    override func viewWillDisappear(_ animated: Bool) {
         
-        print("rating: \(rating)")
+        if ratingView.rating > 0 {
+            
+            saveRating()
+        }
+        
+        super.viewWillDisappear(animated)
+    }
+    
+    // MARK: CoreData
+    
+    func saveRating() {
+        
+        let _ = RatedTalk(title: tedTalk.title, description: tedTalk.talkDescription, presenter: tedTalk.speaker, rating: ratingView.rating)
+        DataManager.persist(synchronously: false)
+    }
+    
+    func loadRating() {
+        
+        let talks = DataManager.fetchObjects(entity: RatedTalk.self, context: DataManager.mainContext)
     }
 }

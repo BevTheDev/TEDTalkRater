@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import CoreData
+import DataManager
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController(rootViewController: TabsViewController())
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        
+        DataManager.setUp(withDataModelName: "TEDTalkRater", bundle: Bundle.main, persistentStoreName: "TEDTalkRater")
         
         return true
     }
