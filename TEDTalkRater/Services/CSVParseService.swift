@@ -14,7 +14,7 @@ class CSVParseService {
     // MARK: - Properties
     
     static let shared = CSVParseService()
-    let batchSize = 200
+    let batchSize = 100
     
     // MARK: - Data Load Methods
     
