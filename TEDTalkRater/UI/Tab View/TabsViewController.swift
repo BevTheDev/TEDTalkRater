@@ -58,6 +58,14 @@ class TabsViewController: UIViewController, UITabBarDelegate {
         showTalksTab()
     }
     
+    override func viewDidLayoutSubviews() {
+        
+        super.viewDidLayoutSubviews()
+        
+        // Fix a layout issue on iPhone X
+        tabBar.invalidateIntrinsicContentSize()
+    }
+    
     // MARK: - Tab Bar Delegate
     
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

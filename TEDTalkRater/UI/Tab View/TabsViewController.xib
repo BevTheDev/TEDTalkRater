@@ -32,9 +32,6 @@
                 <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YPs-lD-qJA">
                     <rect key="frame" x="0.0" y="618" width="375" height="49"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="49" id="LDc-K0-V3v"/>
-                    </constraints>
                     <items>
                         <tabBarItem systemItem="search" id="qpD-fh-J8E"/>
                         <tabBarItem title="Rated" id="sJY-Ea-11m">
@@ -55,7 +52,6 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="YPs-lD-qJA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="62j-hs-d5x"/>
                 <constraint firstItem="YPs-lD-qJA" firstAttribute="top" secondItem="8kX-C7-oF2" secondAttribute="bottom" id="JDH-GN-Acy"/>
                 <constraint firstItem="SVU-Wb-pqM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="LGw-Jz-C1q"/>
                 <constraint firstItem="8kX-C7-oF2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LKO-vS-nPy"/>
@@ -63,6 +59,7 @@
                 <constraint firstItem="8kX-C7-oF2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="N53-6w-hzF"/>
                 <constraint firstItem="YPs-lD-qJA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TeG-Vl-gHR"/>
                 <constraint firstItem="YPs-lD-qJA" firstAttribute="top" secondItem="SVU-Wb-pqM" secondAttribute="bottom" constant="8" id="eQF-ey-GHZ"/>
+                <constraint firstAttribute="bottom" secondItem="YPs-lD-qJA" secondAttribute="bottom" id="nZp-wV-2i4"/>
                 <constraint firstItem="YPs-lD-qJA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="zVM-zC-plA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
