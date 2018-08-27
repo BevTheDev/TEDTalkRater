@@ -15,8 +15,6 @@ class CSVParseService {
     
     static let shared = CSVParseService()
     
-    let csvFileName = "CodeChallenge"
-    
     // MARK: - Data Load Methods
     
     func loadCSVData(updateHandler: @escaping (([TEDTalk]) -> Void)) {
@@ -32,7 +30,7 @@ class CSVParseService {
                 }
             }
             
-            guard let pathForFile = Bundle.main.path(forResource: self.csvFileName, ofType: "csv"), let stream = InputStream(fileAtPath: pathForFile) else {
+            guard let pathForFile = Bundle.main.path(forResource: Constants.CSV.fileName, ofType: "csv"), let stream = InputStream(fileAtPath: pathForFile) else {
                 
                 print("Couldn't read CSV")
                 return
@@ -47,9 +45,9 @@ class CSVParseService {
                 
                 while csv.next() != nil {
                     
-                    guard let title = csv["title"],
-                        let description = csv["description"],
-                        let speaker = csv["main_speaker"] else {
+                    guard let title = csv[Constants.CSV.title],
+                        let description = csv[Constants.CSV.description],
+                        let speaker = csv[Constants.CSV.speaker] else {
                         print("Parse error")
                         return
                     }

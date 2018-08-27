@@ -37,6 +37,14 @@ struct Constants {
         static let rickImage = "Rick Astley Image"
     }
     
+    struct CSV {
+        
+        static let fileName = "CodeChallenge"
+        static let title = "title"
+        static let description = "description"
+        static let speaker = "main_speaker"
+    }
+    
     struct Tests {
         
         static let testsParam = "--tests"
