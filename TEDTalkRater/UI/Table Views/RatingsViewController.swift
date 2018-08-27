@@ -15,6 +15,7 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var noRatingsLabel: UILabel!
+    
     var ratedTalks: [TEDTalk] = []
     let reuseIdentifier = "reuseIdentifier"
     

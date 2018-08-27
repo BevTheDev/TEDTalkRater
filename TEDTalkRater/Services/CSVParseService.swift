@@ -14,6 +14,7 @@ class CSVParseService {
     // MARK: - Properties
     
     static let shared = CSVParseService()
+    let batchSize = 200
     
     // MARK: - Data Load Methods
     
@@ -59,7 +60,7 @@ class CSVParseService {
                     tedTalks.append(talk)
                     
                     // Update the UI in batches
-                    if counter % 200 == 0 {
+                    if counter % self.batchSize == 0 {
                         
                         DispatchQueue.main.async {
                             updateHandler(tedTalks)
