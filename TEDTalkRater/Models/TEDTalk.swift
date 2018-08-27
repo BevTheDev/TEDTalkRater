@@ -15,13 +15,14 @@ public class TEDTalk: NSManagedObject {
     
     static let entityName = "TEDTalk"
     
-    convenience init(title: String, description: String, presenter: String, rating: Double, context: NSManagedObjectContext? = nil) {
+    convenience init(title: String, description: String, presenter: String, rating: Double, shouldPersist: Bool = false) {
         
         guard let entity = NSEntityDescription.entity(forEntityName: TEDTalk.entityName, in: DataManager.mainContext) else {
             
             fatalError("Entity creation failed")
         }
         
+        let context = shouldPersist ? DataManager.mainContext : nil
         self.init(entity: entity, insertInto: context)
         
         self.titleText = title

@@ -39,7 +39,7 @@ struct Constants {
     
     struct Tests {
         
-        static let testsParam = "--uitests"
+        static let testsParam = "--tests"
         static let shakeGesture = "Shake Gesture"
     }
 }

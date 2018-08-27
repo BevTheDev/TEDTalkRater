@@ -8,8 +8,6 @@
 
 import Foundation
 import UIKit
-import CoreData
-import DataManager
 
 class RatingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -49,10 +47,7 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func loadRatedTalks() {
         
-        let ratingSortDescriptor = NSSortDescriptor(key: #keyPath(TEDTalk.rating), ascending: false)
-        let titleSortDescriptor = NSSortDescriptor(key: #keyPath(TEDTalk.titleText), ascending: true)
-        
-        ratedTalks = DataManager.fetchObjects(entity: TEDTalk.self, sortDescriptors: [ratingSortDescriptor, titleSortDescriptor], context: DataManager.mainContext)
+        ratedTalks = CoreDataHelper.fetchRatedTalks()
         
         tableView.reloadData()
     }

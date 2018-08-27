@@ -8,3 +8,7 @@ target 'TEDTalkRater' do
   pod 'PureLayout', '~> 3.0'
   pod 'Cosmos', '~> 16.0'
 end
+
+target 'TEDTalkRaterTests' do
+    inherit! :search_paths
+end

@@ -9,8 +9,6 @@
 import Foundation
 import UIKit
 import Cosmos
-import CoreData
-import DataManager
 
 class TalkDetailsViewController: UIViewController {
     
@@ -71,10 +69,10 @@ class TalkDetailsViewController: UIViewController {
         }
         else {
             
-            let _ = TEDTalk(title: tedTalk.titleText, description: tedTalk.descriptionText, presenter: tedTalk.presenter, rating: ratingView.rating, context: DataManager.mainContext)
+            let _ = TEDTalk(title: tedTalk.titleText, description: tedTalk.descriptionText, presenter: tedTalk.presenter, rating: ratingView.rating, shouldPersist: true)
         }
         
-        DataManager.persist(synchronously: false)
+        CoreDataHelper.save()
     }
     
     func loadRating() {
@@ -86,9 +84,6 @@ class TalkDetailsViewController: UIViewController {
     
     func fetchSavedRating() -> TEDTalk? {
         
-        let predicate = NSPredicate(format: "%K == %@", #keyPath(TEDTalk.titleText), tedTalk.titleText)
-        let fetchedResults = DataManager.fetchObjects(entity: TEDTalk.self, predicate: predicate, context: DataManager.mainContext)
-        
-        return fetchedResults.first
+        return CoreDataHelper.fetchSavedRating(withTitle: tedTalk.titleText)
     }
 }
