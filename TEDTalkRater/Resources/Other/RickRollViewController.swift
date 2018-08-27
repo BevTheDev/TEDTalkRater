@@ -12,6 +12,7 @@ import AVFoundation
 class RickRollViewController: UIViewController {
 
     var player: AVAudioPlayer?
+    @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - View Lifecycle
     
@@ -19,7 +20,14 @@ class RickRollViewController: UIViewController {
         
         super.viewWillAppear(animated)
         
+        setUpAccessibility()
+        
         playDaSong()
+    }
+    
+    func setUpAccessibility() {
+        
+        imageView.accessibilityLabel = Constants.Accessibility.rickImage
     }
     
     // MARK: - Logic

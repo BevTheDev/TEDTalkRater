@@ -18,6 +18,7 @@ class TabsViewController: UIViewController, UITabBarDelegate {
     @IBOutlet weak var talksTab: UITabBarItem!
     @IBOutlet weak var ratingsTab: UITabBarItem!
     @IBOutlet weak var tabBar: UITabBar!
+    @IBOutlet weak var shakeGestureButton: UIButton!
     
     var talksViewController: TalksViewController
     var ratingsViewController: RatingsViewController
@@ -50,6 +51,8 @@ class TabsViewController: UIViewController, UITabBarDelegate {
         tabContainerView.addSubview(talksViewController.view)
         talksViewController.view.autoPinEdgesToSuperviewEdges()
         self.addChildViewController(talksViewController)
+        
+        shakeGestureButton.isHidden = !BuildEnvironment.isRunningTests()
         
         tabBar.selectedItem = talksTab
         showTalksTab()
@@ -97,5 +100,10 @@ class TabsViewController: UIViewController, UITabBarDelegate {
             let rickRoll = RickRollViewController()
             present(rickRoll, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func triggerShakePressed() {
+        
+        motionEnded(.motionShake, with: nil)
     }
 }

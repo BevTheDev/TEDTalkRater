@@ -26,6 +26,7 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         super.viewDidLoad()
         
+        setUpAccessibility()
         noRatingsLabel.text = Constants.Labels.noRatingsLabel
     }
     
@@ -37,6 +38,11 @@ class RatingsViewController: UIViewController, UITableViewDataSource, UITableVie
         
         noRatingsLabel.isHidden = !ratedTalks.isEmpty
         tableView.isHidden = ratedTalks.isEmpty
+    }
+    
+    func setUpAccessibility() {
+        
+        tableView.accessibilityLabel = Constants.Accessibility.ratingsTable
     }
     
     // MARK: - Data Load

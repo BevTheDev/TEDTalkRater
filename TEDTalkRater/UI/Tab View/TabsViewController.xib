@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TabsViewController" customModule="TEDTalkRater" customModuleProvider="target">
             <connections>
                 <outlet property="ratingsTab" destination="sJY-Ea-11m" id="EXb-Xu-dk9"/>
+                <outlet property="shakeGestureButton" destination="SVU-Wb-pqM" id="1zZ-uz-TzX"/>
                 <outlet property="tabBar" destination="YPs-lD-qJA" id="JHT-ag-Gs2"/>
                 <outlet property="tabContainerView" destination="8kX-C7-oF2" id="kNn-fM-xVc"/>
                 <outlet property="talksTab" destination="qpD-fh-J8E" id="vMx-HX-0Qd"/>
@@ -44,15 +45,24 @@
                         <outlet property="delegate" destination="-1" id="wfx-Rh-vhE"/>
                     </connections>
                 </tabBar>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVU-Wb-pqM">
+                    <rect key="frame" x="8" y="580" width="101" height="30"/>
+                    <state key="normal" title="Shake Gesture"/>
+                    <connections>
+                        <action selector="triggerShakePressed" destination="-1" eventType="touchUpInside" id="5Wt-zh-h9Z"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="YPs-lD-qJA" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="62j-hs-d5x"/>
                 <constraint firstItem="YPs-lD-qJA" firstAttribute="top" secondItem="8kX-C7-oF2" secondAttribute="bottom" id="JDH-GN-Acy"/>
+                <constraint firstItem="SVU-Wb-pqM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="LGw-Jz-C1q"/>
                 <constraint firstItem="8kX-C7-oF2" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LKO-vS-nPy"/>
                 <constraint firstItem="8kX-C7-oF2" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="M9Q-Y4-mlD"/>
                 <constraint firstItem="8kX-C7-oF2" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="N53-6w-hzF"/>
                 <constraint firstItem="YPs-lD-qJA" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TeG-Vl-gHR"/>
+                <constraint firstItem="YPs-lD-qJA" firstAttribute="top" secondItem="SVU-Wb-pqM" secondAttribute="bottom" constant="8" id="eQF-ey-GHZ"/>
                 <constraint firstItem="YPs-lD-qJA" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="zVM-zC-plA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

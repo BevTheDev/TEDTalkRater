@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RickRollViewController" customModule="TEDTalkRater" customModuleProvider="target">
             <connections>
+                <outlet property="imageView" destination="RJQ-06-Ibs" id="Kmx-Tk-IMr"/>
                 <outlet property="view" destination="iN0-l3-epB" id="6JW-we-QxV"/>
             </connections>
         </placeholder>

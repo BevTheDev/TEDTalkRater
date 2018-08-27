@@ -29,6 +29,8 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         super.viewDidLoad()
         
+        setUpAccessibility()
+        
         noDataLabel.text = Constants.Labels.loadingLabel
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
@@ -63,6 +65,12 @@ class TalksViewController: UIViewController, UITableViewDataSource, UITableViewD
         guard !tedTalks.isEmpty else { return }
         
         tableView.reloadData()
+    }
+    
+    func setUpAccessibility() {
+        
+        tableView.accessibilityLabel = Constants.Accessibility.talksTable
+        searchBar.accessibilityLabel = Constants.Accessibility.searchBar
     }
     
     // MARK: - UITableView Methods

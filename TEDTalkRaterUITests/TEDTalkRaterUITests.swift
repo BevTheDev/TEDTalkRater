@@ -9,28 +9,76 @@
 import XCTest
 
 class TEDTalkRaterUITests: XCTestCase {
-        
+    
+    var app: XCUIApplication!
+    
     override func setUp() {
+        
         super.setUp()
         
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        
+        app = XCUIApplication()
+        app.launchArguments.append(Constants.Tests.testsParam)
+        app.launch()
+    }
+    
+    func testSaveRatings() {
+        
+        let talkTitle = "Simplicity sells"
+        
+        XCTAssertTrue(app.otherElements[Constants.ScreenTitles.talksScreenTitle].exists)
+        XCTAssertTrue(app.staticTexts[Constants.Labels.loadingLabel].exists)
+        
+        XCTAssertTrue(app.activityIndicators[Constants.Accessibility.loadingIndicator].exists)
+        
+        let tabBarsQuery = app.tabBars
+        tabBarsQuery.buttons[Constants.Labels.ratedTab].tap()
+        XCTAssertTrue(app.staticTexts[Constants.Labels.noRatingsLabel].exists)
+        
+        tabBarsQuery.buttons[Constants.Labels.searchTab].tap()
+        XCTAssertTrue(app.tables[Constants.Accessibility.talksTable].staticTexts[talkTitle].waitForExistence(timeout: 10))
+        app.tables.staticTexts[talkTitle].tap()
+        
+        app.otherElements[Constants.Accessibility.ratingView].tap()
+        
+        app.navigationBars[Constants.ScreenTitles.talksScreenTitle].buttons[Constants.ScreenTitles.talksScreenTitle].tap()
+        
+        tabBarsQuery.buttons[Constants.Labels.ratedTab].tap()
+        XCTAssertTrue(app.tables[Constants.Accessibility.ratingsTable].staticTexts[talkTitle].waitForExistence(timeout: 1))
+        app.tables[Constants.Accessibility.ratingsTable].staticTexts[talkTitle].tap()
+    }
+    
+    func testSearch() {
+        
+        let talkTitle = "Simplicity sells"
+        let filteredTalkTitle = "Behind the design of Seattle's library"
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+        XCTAssertTrue(app.otherElements[Constants.ScreenTitles.talksScreenTitle].exists)
+    XCTAssertTrue(app.tables[Constants.Accessibility.talksTable].staticTexts[talkTitle].waitForExistence(timeout: 10))
+
+        let searchbar = app.otherElements[Constants.Accessibility.searchBar].children(matching: .searchField).element
+        searchbar.tap()
+        
+        searchbar.typeText("lib")
+        
+        app.tables[Constants.Accessibility.talksTable].staticTexts[filteredTalkTitle].tap()
+        
+        app.otherElements[Constants.Accessibility.ratingView].tap()
+        
+        app.navigationBars[Constants.ScreenTitles.talksScreenTitle].buttons[Constants.ScreenTitles.talksScreenTitle].tap()
+        
+        app.tabBars.buttons[Constants.Labels.ratedTab].tap()
+        XCTAssertTrue(app.tables[Constants.Accessibility.ratingsTable].staticTexts[filteredTalkTitle].waitForExistence(timeout: 1))
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testRickRoll() {
+        
+        XCTAssertTrue(app.otherElements[Constants.ScreenTitles.talksScreenTitle].exists)
+        
+        app.buttons[Constants.Tests.shakeGesture].tap()
+        XCTAssertTrue(app.images[Constants.Accessibility.rickImage].exists)
+        
+        app.buttons[Constants.Accessibility.endRickRoll].tap()
     }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
 }
